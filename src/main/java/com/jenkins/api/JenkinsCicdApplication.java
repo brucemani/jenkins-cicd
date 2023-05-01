@@ -16,7 +16,7 @@ import static org.springframework.http.ResponseEntity.ok;
 public class JenkinsCicdApplication {
 
     @GetMapping(produces = APPLICATION_JSON_VALUE)
-    public  sayHello() {
+    public ResponseEntity<?> sayHello() {
         return ok("Welcome to Jenkins CI/CD");
     }
 
