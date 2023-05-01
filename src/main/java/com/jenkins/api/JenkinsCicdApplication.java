@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+
+import static java.time.LocalDateTime.now;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.http.ResponseEntity.ok;
 
@@ -17,7 +20,7 @@ public class JenkinsCicdApplication {
 
     @GetMapping(produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<?> sayHello() {
-        return ok("Welcome to Jenkins CI/CD");
+        return ok("Hello user %s is current datetime".formatted(now().toString()));
     }
 
     public static void main(String[] args) {
