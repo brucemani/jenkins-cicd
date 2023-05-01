@@ -22,7 +22,6 @@ public class JenkinsCicdApplication {
     public ResponseEntity<?> sayHello() {
         return ok("Hello user %s is current datetime".formatted(now().toString()));
     }
-
     public static void main(String[] args) {
         SpringApplication.run(JenkinsCicdApplication.class, args);
     }
